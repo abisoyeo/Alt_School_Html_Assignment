@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        padding: 1rem;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+
+      .nav-link:hover {
+        color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html" class="nav-link">My Details</a>
+      <a href="./table.html" class="nav-link">AltSchool Courses</a>
+    </nav>
+
+    <h1>Welcome to My Media Page</h1>
+    <p>
+      This page demonstrates my creativity using all media elements in HTML!
+    </p>
+
+    <h2>My Responsive Picture</h2>
+    <p>
+      The picture below adapts to different devices (mobile, tablet, laptop):
+    </p>
+
+    <picture>
+      <!-- For devices with a maximum width of 480px -->
+      <source srcset="/assets/7841290.jpg" media="(min-width: 480px)" />
+      <!-- For devices with a maximum width of 768px -->
+      <source srcset="/assets/7841207.jpg" media="(min-width: 650px)" />
+      <!-- For larger screens -->
+      <source
+        srcset="/Assignment1/assets/berafy-image.jpg"
+        media="(min-width: 769px)"
+      />
+      <!-- Fallback image -->
+      <img
+        src="/Assignment1/assets/3358359.jpg"
+        alt="A descriptive picture of me"
+      />
+    </picture>
+
+    <video width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4" />
+      <source src="movie.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+
+    <audio controls>
+      <source src="horse.ogg" type="audio/ogg" />
+      <source src="horse.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>
