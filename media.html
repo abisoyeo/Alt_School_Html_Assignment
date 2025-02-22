@@ -4,24 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      nav {
-        padding: 1rem;
-        background-color: #333;
-        display: flex;
-        justify-content: center;
-      }
-
-      .nav-link {
-        color: white;
-        text-decoration: none;
-        margin-right: 1rem;
-      }
-
-      .nav-link:hover {
-        color: #ddd;
-      }
-    </style>
   </head>
   <body>
     <nav>
@@ -38,34 +20,18 @@
     <p>
       The picture below adapts to different devices (mobile, tablet, laptop):
     </p>
-
     <picture>
-      <!-- For devices with a maximum width of 480px -->
-      <source srcset="/assets/7841290.jpg" media="(min-width: 480px)" />
-      <!-- For devices with a maximum width of 768px -->
+      <!-- Largest screens first (769px and above) -->
+      <source srcset="/assets/berafy-image.jpg" media="(min-width: 769px)" />
+
+      <!-- Medium screens (650px to 768px) -->
       <source srcset="/assets/7841207.jpg" media="(min-width: 650px)" />
-      <!-- For larger screens -->
-      <source
-        srcset="/Assignment1/assets/berafy-image.jpg"
-        media="(min-width: 769px)"
-      />
-      <!-- Fallback image -->
-      <img
-        src="/Assignment1/assets/3358359.jpg"
-        alt="A descriptive picture of me"
-      />
+
+      <!-- Small screens (480px to 649px) -->
+      <source srcset="/assets/7841290.jpg" media="(min-width: 480px)" />
+
+      <!-- Fallback image for very small screens (<480px) -->
+      <img src="./assets/3358359.jpg" alt="A descriptive picture of me" />
     </picture>
-
-    <video width="320" height="240" controls>
-      <source src="movie.mp4" type="video/mp4" />
-      <source src="movie.ogg" type="video/ogg" />
-      Your browser does not support the video tag.
-    </video>
-
-    <audio controls>
-      <source src="horse.ogg" type="audio/ogg" />
-      <source src="horse.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
   </body>
 </html>
